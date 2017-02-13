@@ -1,0 +1,13 @@
+Car Simulation
+
+This has two parts, a server a client. The goal is to keep the car at close to 39 meters per second speed by adjusting the throttle.
+
+The server is a simulation of a car, controlled by an API. The API is strings over TCP sockets (very easy, don't be intimidated).
+
+Send STATUS\n. Server sends back <throttle> <current speed>\n.
+Send THROTTLE <new throttle>\n. Server sends back <new throttle> <current speed>\n.
+throttle is a float between 0 and 100, representing the throttle percentage. Think of it like an airplane throttle, or gas pedal, where 100 is full throttle/pedal to the metal.
+
+speed is meters per second (though the unit doesn't matter).
+
+The client's goal is to keep the car at 39mps by adjusting the throttle.
